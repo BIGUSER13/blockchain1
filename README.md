@@ -150,33 +150,105 @@ Example: python Main.py get_balance Wallet_1
 
 ### Creating Wallets
 
-Show examples and commands for creating wallets.
+Create a New Wallet:
+Command: python Main.py create_wallet
+Example Output:
+New wallet created: Wallet_1
+
+Create Another Wallet:
+Command: python Main.py create_wallet
+Example Output:
+New wallet created: Wallet_2
+Now, you have created two wallets with unique addresses (Wallet_1 and Wallet_2). You can continue to create more wallets using the create_wallet command, and each wallet will be assigned a distinct address.
 
 ### Making Transactions
 
-Provide examples and commands for making transactions between wallets.
+Create a Transaction:
+
+Command: python Main.py transaction Wallet_1 Wallet_2 10.0
+Example Output:
+Transaction added to Block 2
+
+Create Another Transaction:
+Command: python Main.py transaction Wallet_2 Wallet_1 5.0
+Example Output:
+Transaction added to Block 3
+Now, you have initiated two transactions between Wallet_1 and Wallet_2. The specified amounts have been transferred, and these transactions are added to their respective blocks in the blockchain.
 
 ### Adding Blocks
 
-Explain how to add blocks to the blockchain.
+Mine a New Block:
 
+Command: python Main.py add_block
+
+Example Output:
+Enter the proof for the new block: 324567
+Block added: {'index': 4, 'timestamp': 1643529812.123456, 'transactions': [...], 'proof': 324567, 'previous_hash': 'c3b42d7eab7e1a37f4b3f9c2c73de342b3d25c4975d2c5472542278f79b3780f'}
+In this example, you are prompted to enter the proof for the new block. The proof is a value that, when hashed with the previous block's hash, satisfies a specific condition (e.g., having a certain number of leading zeros). The provided proof is used to create a new block, and the block is added to the blockchain.
+
+Verify the Updated Blockchain:
+Command: python Main.py show
+Example Output:
+
+Blockchain:
+{
+  "index": 1,
+  "timestamp": 1643529637.123456,
+  "transactions": [...],
+  "proof": 100,
+  "previous_hash": null
+}
+{
+  "index": 2,
+  "timestamp": 1643529642.123456,
+  "transactions": [...],
+  "proof": 12345,
+  "previous_hash": "68f0f6b3033da05e033c2b03c4911d93a1e2bba28a0e1cfd4b0a32f06dbd7b48"
+}
+{
+  "index": 3,
+  "timestamp": 1643529650.123456,
+  "transactions": [...],
+  "proof": 67890,
+  "previous_hash": "ed746f2519d0d1236e2f877e193c1f1a39f6f1587d55dd4c74d61b1f7d41df75"
+}
+{
+  "index": 4,
+  "timestamp": 1643529812.123456,
+  "transactions": [...],
+  "proof": 324567,
+  "previous_hash": "c3b42d7eab7e1a37f4b3f9c2c73de342b3d25c4975d2c5472542278f79b3780f"
+}
+The updated blockchain includes the newly mined block (Index 4) with the specified proof and previous hash. Each block is linked to the previous one through its hash, ensuring the integrity and immutability of the blockchain.
 ### Displaying Blockchain
 
 Show how to display the current state of the blockchain.
 
 ### Getting Wallet Balance
 
-Explain how to check the balance of a wallet.
+To check the balance of a wallet in the blockchain project, you can use the following command:
+python Main.py get_balance <wallet_address>
+
+Replace <wallet_address> with the actual wallet address you want to check. Here's an example:
+python Main.py get_balance Wallet_2
+This command will output the balance of the specified wallet address. The balance is calculated based on the transactions associated with the wallet in the blockchain.
+
+Example Output:
+Balance of wallet Wallet_2: 25.0
 
 ## Examples
 
-Provide real-world examples or use cases of your blockchain project.
+Cryptocurrency Transactions:
 
-## Contributing
+Users can create wallets, make secure and transparent transactions with a cryptocurrency, and view their transaction history.
+Example command: python Main.py create_wallet
+Supply Chain Management:
 
-Explain how others can contribute to your project.
+The blockchain can be used to track the movement of goods in a supply chain, ensuring transparency and preventing fraud.
+Example command: python Main.py transaction SenderWallet RecipientWallet Amount
+Smart Contracts:
 
-## License
+Implement smart contracts on the blockchain for self-executing contracts with predefined rules.
+Example command: python Main.py add_block
 
-Specify the license under which your project is distributed.
 
