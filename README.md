@@ -15,8 +15,6 @@ This project implements a simple blockchain using Python. It includes functional
   - [Displaying Blockchain](#displaying-blockchain)
   - [Getting Wallet Balance](#getting-wallet-balance)
 - [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 The blockchain project is a simple implementation in Python that simulates a basic blockchain system with features such as creating wallets, making transactions, and adding blocks to the chain. The primary goal is to provide a hands-on understanding of how a blockchain works and its fundamental components.
